@@ -28,7 +28,7 @@ def define_applications_dict(file):
             applications_dict = {}
             for csv_row in application_csv:
                 app_name = str(csv_row.split(',')[0])
-                filepath = str(csv_row.split(',')[1])
+                filepath = str(csv_row.split(',')[1]).strip()
                 applications_dict[app_name] = filepath
         return applications_dict
     except FileNotFoundError:
